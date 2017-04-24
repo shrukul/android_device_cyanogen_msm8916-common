@@ -154,6 +154,8 @@ on post-fs-data
     mkdir /data/data/media 0770 media media
 
     mkdir /data/diag_logs 0777 system system
+    
+    write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
